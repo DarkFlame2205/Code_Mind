@@ -117,3 +117,24 @@ Notes:
 - Do not include `node_modules/` or temporary folders in the repo. Users can run `npm install` to fetch dependencies.
 - Ensure Ollama LLM is installed locally for AI explanations.
 
+
+Frontend Developer Instructions:
+--------------------------------
+1. The frontend should be built using React + Next.js + Tailwind CSS.
+2. Components to implement:
+   - FileUploader.jsx → Upload folder/files to backend (/upload)
+   - FileTree.jsx → Display folder/file structure returned from backend
+   - LogicTree.jsx → Render logic tree from /upload response
+   - ChatWindow.jsx → AI explanations via /explain
+   - SnippetIntegration.jsx → Suggest integration points via /snippet
+   - CallFlowGraph.jsx → Visualize function/module call-flow using Mermaid.js
+3. API integration:
+   - Use Axios or similar to call backend endpoints (localhost:3001)
+   - Ensure proper error handling if files or code are missing
+4. Deployment:
+   - Connect frontend to backend APIs
+   - Deploy on Vercel (backend can run locally or on a server)
+5. Styling:
+   - Use Tailwind CSS for responsive UI
+   - Optional: Add visual indicators for linting errors, optimized code suggestions, and AI explanations
+
